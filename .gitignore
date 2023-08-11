@@ -3,6 +3,8 @@ results/
 Outputs/
 benchmark/
 
+.vscode/
+
 *.npy
 
 # Byte-compiled / optimized / DLL files
