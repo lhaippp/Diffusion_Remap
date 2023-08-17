@@ -1,0 +1,19 @@
+TaskName: "dreamVideo"
+Description: ""
+Entrypoint: "bash"
+Tags: [] 
+Envs: []
+ImageUrl: "cr-megvii-enterprise-cn-beijing.cr.volces.com/images/lhp-lab:0.1"
+ResourceQueueID : "q-20230731133433-f4hks"  
+Framework: "PyTorchDDP"
+TaskRoleSpecs:
+  - RoleName: "worker"
+    RoleReplicas: 1 
+    Flavor: "ml.pni2l.3xlarge"
+ActiveDeadlineSeconds: 432000
+DelayExitTimeSeconds: 36000
+EnableTensorBoard: False
+Storages: 
+  - Type: "Vepfs"
+    MountPath: "/data/users/lihaipeng"
+    SubPath: "users/lihaipeng" 
